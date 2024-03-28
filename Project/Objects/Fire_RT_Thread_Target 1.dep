@@ -1,16 +1,25 @@
 Dependencies for Project 'Fire_RT_Thread', Target 'Target 1': (DO NOT MODIFY !)
-CompilerVersion: 6140001::V6.14.1::ARMCLANG
-F (..\User\main.c)(0x66051508)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-mlittle-endian -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_Target_1-I"D:/Program Files (x86)/Keil5/PACK/ARM/CMSIS/5.7.0/CMSIS/Core/Include"-I"D:/Program Files (x86)/Keil5/PACK/ARM/CMSIS/5.7.0/Device/ARM/ARMCM3/Include"-D__UVISION_VERSION="532" -D_RTE_ -DARMCM3 -D_RTE_-o ./objects/main.o -MD)
+CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
+F (..\User\main.c)(0x66053508)(-c --cpu Cortex-M3 --li -g -O0 --apcs=interwork --split_sections -I ..\User -I ..\rtthread3.0.3\bsp -I ..\rtthread3.0.3\components\finsh -I ..\rtthread3.0.3\include -I ..\rtthread3.0.3\include\libc-I.\RTE\_Target_1-I"D:\Program Files (x86)\Keil5\PACK\ARM\CMSIS\5.7.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil5\PACK\ARM\CMSIS\5.7.0\Device\ARM\ARMCM3\Include"-D__UVISION_VERSION="532" -D_RTE_ -DARMCM3 -D_RTE_-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (..\rtthread3.0.3\include\rtdef.h)(0x66053B20)
+I (..\rtthread3.0.3\include\rtservice.h)(0x66053AED)
+I (..\User\rtconfig.h)(0x66052FFD)
+F (..\User\rtconfig.h)(0x66052FFD)()
+F (..\rtthread3.0.3\include\rtdef.h)(0x66053B20)()
+F (..\rtthread3.0.3\src\rtthread.h)(0x66053A51)()
+F (..\rtthread3.0.3\src\thread.c)(0x66053B51)(-c --cpu Cortex-M3 --li -g -O0 --apcs=interwork --split_sections -I ..\User -I ..\rtthread3.0.3\bsp -I ..\rtthread3.0.3\components\finsh -I ..\rtthread3.0.3\include -I ..\rtthread3.0.3\include\libc-I.\RTE\_Target_1-I"D:\Program Files (x86)\Keil5\PACK\ARM\CMSIS\5.7.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil5\PACK\ARM\CMSIS\5.7.0\Device\ARM\ARMCM3\Include"-D__UVISION_VERSION="532" -D_RTE_ -DARMCM3 -D_RTE_-o .\objects\thread.o --omf_browse .\objects\thread.crf --depend .\objects\thread.d)
+I (..\rtthread3.0.3\include\rtdef.h)(0x66053B20)
+I (..\rtthread3.0.3\include\rtservice.h)(0x66053AED)
+I (..\rtthread3.0.3\src\rtthread.h)(0x66053A51)
+F (..\rtthread3.0.3\include\rtservice.h)(0x66053AED)()
 F (..\Doc\redme.txt)(0x66051415)()
-F (RTE\Device\ARMCM3\startup_ARMCM3.s)(0x5E8ED12C)(--target=arm-arm-none-eabi -mcpu=cortex-m3 -masm=auto -c-mlittle-endian -gdwarf-3-I./RTE/_Target_1-I"D:/Program Files (x86)/Keil5/PACK/ARM/CMSIS/5.7.0/CMSIS/Core/Include"-I"D:/Program Files (x86)/Keil5/PACK/ARM/CMSIS/5.7.0/Device/ARM/ARMCM3/Include"-Wa,armasm,--pd,"__UVISION_VERSION SETA 532" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"ARMCM3 SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o ./objects/startup_armcm3.o)
-F (RTE\Device\ARMCM3\system_ARMCM3.c)(0x5E8ED12C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-mlittle-endian -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_Target_1-I"D:/Program Files (x86)/Keil5/PACK/ARM/CMSIS/5.7.0/CMSIS/Core/Include"-I"D:/Program Files (x86)/Keil5/PACK/ARM/CMSIS/5.7.0/Device/ARM/ARMCM3/Include"-D__UVISION_VERSION="532" -D_RTE_ -DARMCM3 -D_RTE_-o ./objects/system_armcm3.o -MD)
+F (RTE\Device\ARMCM3\startup_ARMCM3.s)(0x5E8ED12C)(--cpu Cortex-M3 --li -g --apcs=interwork -I.\RTE\_Target_1-I"D:\Program Files (x86)\Keil5\PACK\ARM\CMSIS\5.7.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil5\PACK\ARM\CMSIS\5.7.0\Device\ARM\ARMCM3\Include"--pd "__UVISION_VERSION SETA 532" --pd "_RTE_ SETA 1" --pd "ARMCM3 SETA 1" --pd "_RTE_ SETA 1"--list .\listings\startup_armcm3.lst --xref -o .\objects\startup_armcm3.o --depend .\objects\startup_armcm3.d)
+F (RTE\Device\ARMCM3\system_ARMCM3.c)(0x66051854)(-c --cpu Cortex-M3 --li -g -O0 --apcs=interwork --split_sections -I ..\User -I ..\rtthread3.0.3\bsp -I ..\rtthread3.0.3\components\finsh -I ..\rtthread3.0.3\include -I ..\rtthread3.0.3\include\libc-I.\RTE\_Target_1-I"D:\Program Files (x86)\Keil5\PACK\ARM\CMSIS\5.7.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil5\PACK\ARM\CMSIS\5.7.0\Device\ARM\ARMCM3\Include"-D__UVISION_VERSION="532" -D_RTE_ -DARMCM3 -D_RTE_-o .\objects\system_armcm3.o --omf_browse .\objects\system_armcm3.crf --depend .\objects\system_armcm3.d)
 I (D:\Program Files (x86)\Keil5\PACK\ARM\CMSIS\5.7.0\Device\ARM\ARMCM3\Include\ARMCM3.h)(0x5E8ED12C)
 I (D:\Program Files (x86)\Keil5\PACK\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8ED122)
-I (D:\Program Files (x86)\Keil5\CORE\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (D:\Program Files (x86)\Keil5\CORE\ARM\ARMCC\include\stdint.h)(0x5F63877C)
 I (D:\Program Files (x86)\Keil5\PACK\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
 I (D:\Program Files (x86)\Keil5\PACK\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
-I (D:\Program Files (x86)\Keil5\PACK\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h)(0x5E8ED122)
-I (D:\Program Files (x86)\Keil5\CORE\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CC2EC)
-I (D:\Program Files (x86)\Keil5\CORE\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CC318)
+I (D:\Program Files (x86)\Keil5\PACK\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
 I (D:\Program Files (x86)\Keil5\PACK\ARM\CMSIS\5.7.0\CMSIS\Core\Include\mpu_armv7.h)(0x5E8ED122)
 I (D:\Program Files (x86)\Keil5\PACK\ARM\CMSIS\5.7.0\Device\ARM\ARMCM3\Include\system_ARMCM3.h)(0x5E8ED12C)
