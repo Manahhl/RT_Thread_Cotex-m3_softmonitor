@@ -8,9 +8,7 @@
  * @copyright Copyright (c) 2024
  * 
  */
-#include "rtdef.h"
-#include "rtthread.h"
-#include "rtservice.h"
+#include "main.h"
 
 rt_err_t rt_thread_init(struct rt_thread *thread,
                         void (*entry)(void *parameter),

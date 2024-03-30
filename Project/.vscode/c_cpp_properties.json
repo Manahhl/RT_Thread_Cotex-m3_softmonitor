@@ -21,9 +21,11 @@
                 "d:\\Git_projects\\RT_Thread_From0to1_softmonitor\\rtthread3.0.3\\components\\finsh",
                 "d:\\Git_projects\\RT_Thread_From0to1_softmonitor\\rtthread3.0.3\\include",
                 "d:\\Git_projects\\RT_Thread_From0to1_softmonitor\\rtthread3.0.3\\include\\libc",
+                "d:\\Git_projects\\RT_Thread_From0to1_softmonitor\\rtthread3.0.3\\src",
+                "d:\\Git_projects\\RT_Thread_From0to1_softmonitor\\rtthread3.0.3\\libcpu\\arm\\cortex-m3",
+                "d:\\Git_projects\\RT_Thread_From0to1_softmonitor\\User\\device_include",
                 "D:\\Program Files (x86)\\Keil5\\CORE\\ARM\\ARMCC\\include",
                 "D:\\Program Files (x86)\\Keil5\\CORE\\ARM\\ARMCC\\include\\rw",
-                "d:\\Git_projects\\RT_Thread_From0to1_softmonitor\\rtthread3.0.3\\src",
                 "d:\\Git_projects\\RT_Thread_From0to1_softmonitor\\Doc"
             ],
             "defines": [
