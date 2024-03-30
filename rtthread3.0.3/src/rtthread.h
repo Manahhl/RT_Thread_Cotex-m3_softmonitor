@@ -1,5 +1,6 @@
 #ifndef __RTTHREAD_H
 #define __RTTHREAD_H
+#include "main.h"
 
 rt_err_t rt_thread_init(struct rt_thread *thread,
                         void (*entry)(void *parameter),

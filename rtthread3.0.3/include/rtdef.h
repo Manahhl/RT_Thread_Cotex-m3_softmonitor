@@ -1,6 +1,6 @@
 #ifndef __RT_DEF_H
 #define __RT_DEF_H
-#include "rtservice.h"
+#include "main.h"
 
 /***
  * ******************************************************************
@@ -52,10 +52,21 @@ typedef rt_base_t           rt_off_t;
 #error not supported tool chain
 #endif // __CC_ARM
 
-#define  RT_ALIGN(size,align)       (((size)+(align) - 1)&((aling) - 1))
+#define  RT_ALIGN(size,align)       (((size)+(align) - 1)& ~((aling) - 1))
 #define  RT_ALIGN_DOWN(size,align)  ((size) & ~((align) - 1))
 
 #define  RT_NULL                    (0)
+
+/**
+ * @brief 线程列表节点
+ * 
+ */
+struct rt_list_node
+{
+    struct rt_list_node *next;
+    struct rt_list_node *prev;
+};
+typedef struct rt_list_node rt_list_t;
 
 /**
  * @brief rt_thread 线程控制块
@@ -73,14 +84,18 @@ struct rt_thread
 };
 typedef struct rt_thread *rt_thread_t;
 
-
-
-
-/**
- * @brief RT-thead错误码重定义
- * 
- */
-#define RT_EOK 0;//无错误
+/* RT-Thread 错误码重定义 */
+#define RT_EOK 0      /**< There is no error */
+#define RT_ERROR 1    /**< A generic error happens */
+#define RT_ETIMEOUT 2 /**< Timed out */
+#define RT_EFULL 3    /**< The resource is full */
+#define RT_EEMPTY 4   /**< The resource is empty */
+#define RT_ENOMEM 5   /**< No memory */
+#define RT_ENOSYS 6   /**< No system */
+#define RT_EBUSY 7    /**< Busy */
+#define RT_EIO 8      /**< IO error */
+#define RT_EINTR 9    /**< Interrupted system call */
+#define RT_EINVAL 10  /**< Invalid argument */
 
 #endif // __RT_DEF_H
 
