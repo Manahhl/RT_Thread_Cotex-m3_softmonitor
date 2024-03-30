@@ -8,15 +8,20 @@
  * @copyright Copyright (c) 2024
  * 
  */
-#include "rtdef.h"
-#include "rtthread.h"
-#include "rtservice.h"
+#include "main.h"
 
+/// @brief 由main函数调用
+/// @param thread 线程控制块参数指针
+/// @param entry 线程函数入口，目标线程函数
+/// @param parameter 线程参数
+/// @param stack_start 线程栈空间起始地址
+/// @param stack_size 线程栈空间大小，单位为字节 定义大小为512字节
+/// @return 
 rt_err_t rt_thread_init(struct rt_thread *thread,
-                        void (*entry)(void *parameter),
-                        void *parameter,
-                        void *stack_start,
-                        rt_uint32_t stack_size)
+                        void             (*entry)(void *parameter),
+                        void             *parameter,
+                        void             *stack_start,
+                        rt_uint32_t      stack_size)
 {
     rt_list_init(&(thread->tlist));
 

@@ -16,7 +16,11 @@
       },
       {
         "name": "::Device",
-        "files": [],
+        "files": [
+          {
+            "path": "RTE/Device/ARMCM3/system_ARMCM3.c"
+          }
+        ],
         "folders": []
       },
       {
@@ -30,7 +34,14 @@
         "folders": [
           {
             "name": "ports",
-            "files": [],
+            "files": [
+              {
+                "path": "../rtthread3.0.3/libcpu/arm/cortex-m3/context_rvds.s"
+              },
+              {
+                "path": "../rtthread3.0.3/libcpu/arm/cortex-m3/cpuport.c"
+              }
+            ],
             "folders": []
           },
           {
@@ -43,7 +54,13 @@
                 "path": "../rtthread3.0.3/include/rtservice.h"
               },
               {
+                "path": "../rtthread3.0.3/src/object.c"
+              },
+              {
                 "path": "../rtthread3.0.3/src/rtthread.h"
+              },
+              {
+                "path": "../rtthread3.0.3/src/scheduler.c"
               },
               {
                 "path": "../rtthread3.0.3/src/thread.c"
@@ -60,6 +77,9 @@
             "path": "../User/main.c"
           },
           {
+            "path": "../User/main.h"
+          },
+          {
             "path": "../User/rtconfig.h"
           }
         ],
@@ -68,10 +88,10 @@
     ]
   },
   "outDir": "build",
-  "deviceName": null,
-  "packDir": null,
+  "deviceName": "STM32F103C8",
+  "packDir": ".pack/Keil/STM32F1xx_DFP.2.4.1",
   "miscInfo": {
-    "uid": "df15b03def631a614fe08f37ead97480"
+    "uid": "72093823d48ce5295995f24661808dcc"
   },
   "targets": {
     "Target 1": {
@@ -80,31 +100,111 @@
       "compileConfig": {
         "cpuType": "Cortex-M3",
         "floatingPointHardware": "none",
+        "scatterFilePath": "Fire_RT_Thread.Target 1.sct",
         "useCustomScatterFile": false,
-        "scatterFilePath": "<YOUR_SCATTER_FILE>.sct",
         "storageLayout": {
           "RAM": [
+            {
+              "tag": "RAM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
+            {
+              "tag": "RAM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
+            {
+              "tag": "RAM",
+              "id": 3,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
             {
               "tag": "IRAM",
               "id": 1,
               "mem": {
                 "startAddr": "0x20000000",
-                "size": "0x5000"
+                "size": "0x20000"
               },
               "isChecked": true,
+              "noInit": false
+            },
+            {
+              "tag": "IRAM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
               "noInit": false
             }
           ],
           "ROM": [
             {
+              "tag": "ROM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            },
+            {
+              "tag": "ROM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            },
+            {
+              "tag": "ROM",
+              "id": 3,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            },
+            {
               "tag": "IROM",
               "id": 1,
               "mem": {
-                "startAddr": "0x08000000",
-                "size": "0x10000"
+                "startAddr": "0x0",
+                "size": "0x40000"
               },
               "isChecked": true,
               "isStartup": true
+            },
+            {
+              "tag": "IROM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
             }
           ]
         },
@@ -143,13 +243,16 @@
           "../rtthread3.0.3/components/finsh",
           "../rtthread3.0.3/include",
           "../rtthread3.0.3/include/libc",
-          ".cmsis/include",
+          "../rtthread3.0.3/src",
+          "../rtthread3.0.3/libcpu/arm/cortex-m3",
           "RTE/_Target 1",
           ".eide/deps"
         ],
         "libList": [],
         "sourceDirList": [],
-        "defineList": []
+        "defineList": [
+          "STM32F10X_MD"
+        ]
       }
     }
   },

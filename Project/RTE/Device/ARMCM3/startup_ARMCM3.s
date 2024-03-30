@@ -45,7 +45,7 @@ __initial_sp
 Heap_Size       EQU      0x00000C00
 
                 IF       Heap_Size != 0                      ; Heap is provided
-                AREA     HEAP, NOINIT, READWRITE, ALIGN=3
+                AREA     HEAP, NOINIT, READWRITE, ALIGN=3    ;ALIGN = 3 2^3 = 8 8×Ö½Ú¶ÔÆë
 __heap_base
 Heap_Mem        SPACE    Heap_Size
 __heap_limit
