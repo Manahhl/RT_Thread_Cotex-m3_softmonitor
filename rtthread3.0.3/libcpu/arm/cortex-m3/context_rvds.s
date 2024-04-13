@@ -206,13 +206,14 @@ _reswitch
     ; 子程序结束
     ENDP
 
+
 ;/**关闭中断
 ;* rt_base_t rt_hw_interrrupt_disable();
 ;*/
-rt_hw_interrrupt_disable    PROC
+rt_hw_interrupt_disable    PROC
     EXPORT rt_hw_interrupt_disable
     MRS r0, PRIMASK
-    CPISD I
+    CPSID I
     BX LR
     ENDP
 

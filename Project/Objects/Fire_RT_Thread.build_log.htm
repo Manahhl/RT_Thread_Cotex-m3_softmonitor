@@ -22,21 +22,28 @@ Dialog DLL:      TCM.DLL V1.46.0.0
  
 <h2>Project:</h2>
 D:\Git_projects\RT_Thread_From0to1_softmonitor\Project\Fire_RT_Thread.uvprojx
-Project File Date:  04/02/2024
+Project File Date:  04/13/2024
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\Program Files (x86)\Keil5\CORE\ARM\ARMCC\Bin'
 Rebuild target 'Target 1'
 assembling context_rvds.s...
 assembling startup_ARMCM3.s...
-compiling main.c...
 compiling thread.c...
+..\rtthread3.0.3\include\rtdef.h(112): error:  #70: incomplete type is not allowed
+      enum rt_object_class_type type;         //对象类型
+..\rtthread3.0.3\src\thread.c: 0 warnings, 1 error
 compiling cpuport.c...
 compiling scheduler.c...
+..\rtthread3.0.3\include\rtdef.h(112): error:  #70: incomplete type is not allowed
+      enum rt_object_class_type type;         //对象类型
+..\rtthread3.0.3\src\scheduler.c: 0 warnings, 1 error
+compiling main.c...
+..\rtthread3.0.3\include\rtdef.h(112): error:  #70: incomplete type is not allowed
+      enum rt_object_class_type type;         //对象类型
+..\User\main.c: 0 warnings, 1 error
 compiling system_ARMCM3.c...
-linking...
-Program Size: Code=804 RO-data=992 RW-data=24 ZI-data=2360  
-".\Objects\Fire_RT_Thread.axf" - 0 Error(s), 0 Warning(s).
+".\Objects\Fire_RT_Thread.axf" - 3 Error(s), 0 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -58,8 +65,9 @@ Package Vendor: ARM
 
    * Component: ARM::Device:Startup:1.2.2
       Include file:  Device\ARM\ARMCM3\Include\ARMCM3.h
-      Source file:   Device\ARM\ARMCM3\Source\system_ARMCM3.c
       Source file:   Device\ARM\ARMCM3\Source\ARM\startup_ARMCM3.s
+      Source file:   Device\ARM\ARMCM3\Source\system_ARMCM3.c
+Target not created.
 Build Time Elapsed:  00:00:01
 </pre>
 </body>

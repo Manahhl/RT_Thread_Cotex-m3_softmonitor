@@ -147,7 +147,9 @@ enum rt_object_class_type
     RT_Object_Class_Module,         //对象是模块
     RT_Object_Class_Unknown,        //未知对象
     RT_Object_Class_Static = 0x80   //静态对象
-}
+};
+
+
 
 #endif // __RT_DEF_H
 

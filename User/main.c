@@ -7,6 +7,11 @@
 #include "main.h"
 #include "stdio.h"
 
+ALIGN(RT_ALIGN_SIZE)
+
+rt_uint8_t rt_flag1_thread_stack[512];
+rt_uint8_t rt_flag2_thread_stack[512];
+
 rt_uint8_t flag1 = 0;
 rt_uint8_t flag2 = 0;
 extern rt_list_t rt_thread_priority_table[RT_THREAD_PRIORITY_MAX];
