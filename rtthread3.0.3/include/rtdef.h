@@ -90,6 +90,7 @@ struct rt_thread
 };
 typedef struct rt_thread *rt_thread_t;
 
+<<<<<<< HEAD
 /**
  * @brief 对象数据类型定义
  */
@@ -148,6 +149,20 @@ enum rt_object_class_type
     RT_Object_Class_Unknown,        //未知对象
     RT_Object_Class_Static = 0x80   //静态对象
 }
+=======
+/* RT-Thread 错误码重定义 */
+#define RT_EOK 0      /**< There is no error */
+#define RT_ERROR 1    /**< A generic error happens */
+#define RT_ETIMEOUT 2 /**< Timed out */
+#define RT_EFULL 3    /**< The resource is full */
+#define RT_EEMPTY 4   /**< The resource is empty */
+#define RT_ENOMEM 5   /**< No memory */
+#define RT_ENOSYS 6   /**< No system */
+#define RT_EBUSY 7    /**< Busy */
+#define RT_EIO 8      /**< IO error */
+#define RT_EINTR 9    /**< Interrupted system call */
+#define RT_EINVAL 10  /**< Invalid argument */
+>>>>>>> 15defa99e7e4f7da199465be6f38fedccd8f08cc
 
 #endif // __RT_DEF_H
 

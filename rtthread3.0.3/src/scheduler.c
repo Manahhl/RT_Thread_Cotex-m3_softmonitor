@@ -11,8 +11,12 @@ rt_list_t rt_thread_priority_table[RT_THREAD_PRIORITY_MAX];
 rt_thread_t rt_current_thread;
 
 extern void rt_hw_context_switch(rt_uint32_t from, rt_uint32_t to);
+<<<<<<< HEAD
 extern void rt_hw_context_switch_to(rt_uint32_t to);	
 						
+=======
+extern void rt_hw_context_switch_to(rt_uint32_t to);							
+>>>>>>> 15defa99e7e4f7da199465be6f38fedccd8f08cc
 /* 系统调度 */
 void rt_schedule(void)
 {

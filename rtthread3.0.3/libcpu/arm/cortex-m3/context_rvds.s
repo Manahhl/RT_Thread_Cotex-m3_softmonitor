@@ -205,6 +205,7 @@ _reswitch
     BX LR 
     ; 子程序结束
     ENDP
+<<<<<<< HEAD
 
 ;/**关闭中断
 ;* rt_base_t rt_hw_interrrupt_disable();
@@ -225,6 +226,9 @@ rt_hw_interrupt_enable    PROC
     BX  LR
     ENDP
 
+=======
+    
+>>>>>>> 15defa99e7e4f7da199465be6f38fedccd8f08cc
     ALIGN  4
     
     END
