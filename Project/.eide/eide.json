@@ -2,24 +2,26 @@
   "name": "Fire_RT_Thread",
   "type": "ARM",
   "dependenceList": [],
-  "srcDirs": [],
+  "srcDirs": [
+    ".eide/deps"
+  ],
   "virtualFolder": {
     "name": "<virtual_root>",
     "files": [],
     "folders": [
       {
-        "name": "user",
-        "files": [
-          {
-            "path": "../User/main.c"
-          },
-          {
-            "path": "../User/rtconfig.h"
-          },
-          {
-            "path": "../User/main.h"
-          }
-        ],
+        "name": "::CMSIS",
+        "files": [],
+        "folders": []
+      },
+      {
+        "name": "::Device",
+        "files": [],
+        "folders": []
+      },
+      {
+        "name": "doc",
+        "files": [],
         "folders": []
       },
       {
@@ -30,10 +32,10 @@
             "name": "ports",
             "files": [
               {
-                "path": "../rtthread3.0.3/libcpu/arm/cortex-m3/cpuport.c"
+                "path": "../rtthread3.0.3/libcpu/arm/cortex-m3/context_rvds.s"
               },
               {
-                "path": "../rtthread3.0.3/libcpu/arm/cortex-m3/context_rvds.s"
+                "path": "../rtthread3.0.3/libcpu/arm/cortex-m3/cpuport.c"
               }
             ],
             "folders": []
@@ -45,16 +47,25 @@
                 "path": "../rtthread3.0.3/include/rtdef.h"
               },
               {
-                "path": "../rtthread3.0.3/src/rtthread.h"
-              },
-              {
-                "path": "../rtthread3.0.3/src/thread.c"
-              },
-              {
                 "path": "../rtthread3.0.3/include/rtservice.h"
               },
               {
+                "path": "../rtthread3.0.3/src/idle.c"
+              },
+              {
+                "path": "../rtthread3.0.3/src/kservice.c"
+              },
+              {
+                "path": "../rtthread3.0.3/src/object.c"
+              },
+              {
+                "path": "../rtthread3.0.3/src/rtthread.h"
+              },
+              {
                 "path": "../rtthread3.0.3/src/scheduler.c"
+              },
+              {
+                "path": "../rtthread3.0.3/src/thread.c"
               }
             ],
             "folders": []
@@ -62,26 +73,28 @@
         ]
       },
       {
-        "name": "doc",
-        "files": [],
-        "folders": []
-      },
-      {
-        "name": "::CMSIS",
-        "files": [],
-        "folders": []
-      },
-      {
-        "name": "::Device",
-        "files": [],
+        "name": "user",
+        "files": [
+          {
+            "path": "../User/main.c"
+          },
+          {
+            "path": "../User/main.h"
+          },
+          {
+            "path": "../User/rtconfig.h"
+          }
+        ],
         "folders": []
       }
     ]
   },
   "outDir": "build",
-  "deviceName": null,
-  "packDir": null,
-  "miscInfo": {},
+  "deviceName": "STM32F103C8",
+  "packDir": ".pack/Keil/STM32F1xx_DFP.2.4.1",
+  "miscInfo": {
+    "uid": "df15b03def631a614fe08f37ead97480"
+  },
   "targets": {
     "Target 1": {
       "excludeList": [],
@@ -89,8 +102,8 @@
       "compileConfig": {
         "cpuType": "Cortex-M3",
         "floatingPointHardware": "none",
-        "scatterFilePath": "Fire_RT_Thread.Target 1.sct",
         "useCustomScatterFile": false,
+        "scatterFilePath": "",
         "storageLayout": {
           "RAM": [
             {
@@ -199,23 +212,33 @@
         },
         "options": "null"
       },
-      "uploader": "JLink",
+      "uploader": "STLink",
       "uploadConfig": {
         "bin": "",
-        "baseAddr": "",
-        "cpuInfo": {
-          "vendor": "null",
-          "cpuName": "null"
-        },
-        "proType": 1,
-        "speed": 8000,
+        "proType": "SWD",
+        "resetMode": "default",
+        "runAfterProgram": true,
+        "speed": 4000,
+        "address": "0x0",
+        "elFile": "None",
+        "optionBytes": ".eide/target 1.st.option.bytes.ini",
         "otherCmds": ""
       },
-      "uploadConfigMap": {},
+      "uploadConfigMap": {
+        "JLink": {
+          "bin": "",
+          "baseAddr": "",
+          "cpuInfo": {
+            "vendor": "null",
+            "cpuName": "null"
+          },
+          "proType": 1,
+          "speed": 8000,
+          "otherCmds": ""
+        }
+      },
       "custom_dep": {
         "name": "default",
-        "sourceDirList": [],
-        "libList": [],
         "incList": [
           "../User",
           "../rtthread3.0.3/bsp",
@@ -224,9 +247,11 @@
           "../rtthread3.0.3/include/libc",
           "../rtthread3.0.3/src",
           "../rtthread3.0.3/libcpu/arm/cortex-m3",
-          ".cmsis/include",
+          "../User/device_include",
           "RTE/_Target 1"
         ],
+        "libList": [],
+        "sourceDirList": [],
         "defineList": []
       }
     }
