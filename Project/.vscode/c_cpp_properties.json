@@ -23,7 +23,10 @@
                 "d:\\Git_projects\\RT_Thread_From0to1_softmonitor\\rtthread3.0.3\\include\\libc",
                 "d:\\Git_projects\\RT_Thread_From0to1_softmonitor\\rtthread3.0.3\\src",
                 "d:\\Git_projects\\RT_Thread_From0to1_softmonitor\\rtthread3.0.3\\libcpu\\arm\\cortex-m3",
+<<<<<<< HEAD
                 "d:\\Git_projects\\RT_Thread_From0to1_softmonitor\\User\\device_include",
+=======
+>>>>>>> a909705842d9a831a44f2597fd0153fec3b1a0cf
                 "D:\\Program Files (x86)\\Keil5\\CORE\\ARM\\ARMCC\\include",
                 "D:\\Program Files (x86)\\Keil5\\CORE\\ARM\\ARMCC\\include\\rw",
                 "d:\\Git_projects\\RT_Thread_From0to1_softmonitor\\Doc"

@@ -189,7 +189,7 @@
             <hadIRAM2>0</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
-            <useUlib>0</useUlib>
+            <useUlib>1</useUlib>
             <EndSel>1</EndSel>
             <uLtcg>0</uLtcg>
             <nSecure>0</nSecure>
@@ -339,7 +339,11 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
+<<<<<<< HEAD
               <IncludePath>..\User;..\rtthread3.0.3\bsp;..\rtthread3.0.3\components\finsh;..\rtthread3.0.3\include;..\rtthread3.0.3\include\libc;..\rtthread3.0.3\src;..\rtthread3.0.3\libcpu\arm\cortex-m3;..\User\device_include</IncludePath>
+=======
+              <IncludePath>..\User;..\rtthread3.0.3\bsp;..\rtthread3.0.3\components\finsh;..\rtthread3.0.3\include;..\rtthread3.0.3\include\libc;..\rtthread3.0.3\src;..\rtthread3.0.3\libcpu\arm\cortex-m3</IncludePath>
+>>>>>>> a909705842d9a831a44f2597fd0153fec3b1a0cf
             </VariousControls>
           </Cads>
           <Aads>
@@ -370,7 +374,7 @@
             <TextAddressRange>0x00000000</TextAddressRange>
             <DataAddressRange>0x20000000</DataAddressRange>
             <pXoBase></pXoBase>
-            <ScatterFile></ScatterFile>
+            <ScatterFile>.\Fire_RT_Thread.Target 1.sct</ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
             <Misc></Misc>

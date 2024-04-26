@@ -32,9 +32,9 @@
  
 #define  XTAL            (50000000UL)     /* Oscillator frequency */
 
-#define  SYSTEM_CLOCK    (XTAL / 2U)      //系统默认时钟为25Mhz 
+#define  SYSTEM_CLOCK    (XTAL / 2U)      //系统默锟斤拷时锟斤拷为25Mhz 
 																					//added by hhl 2024 03 28
-																					//系统调试需将调试时钟改为25Mhz
+																					//系统锟斤拷锟斤拷锟借将锟斤拷锟斤拷时锟接革拷为25Mhz
 /*----------------------------------------------------------------------------
   Exception / Interrupt Vector table
  *----------------------------------------------------------------------------*/

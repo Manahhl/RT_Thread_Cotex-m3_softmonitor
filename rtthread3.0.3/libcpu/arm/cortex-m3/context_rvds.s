@@ -205,7 +205,34 @@ _reswitch
     BX LR 
     ; 子程序结束
     ENDP
+<<<<<<< HEAD
     
+=======
+<<<<<<< HEAD
+
+;/**关闭中断
+;* rt_base_t rt_hw_interrrupt_disable();
+;*/
+rt_hw_interrrupt_disable    PROC
+    EXPORT rt_hw_interrupt_disable
+    MRS r0, PRIMASK
+    CPISD I
+    BX LR
+    ENDP
+
+;/**开启中断
+;* void rt_hw_interrupt_enable(rt_base_t level)
+;*/
+rt_hw_interrupt_enable    PROC
+    EXPORT rt_hw_interrupt_enable
+    MSR PRIMASK, r0
+    BX  LR
+    ENDP
+
+=======
+    
+>>>>>>> 15defa99e7e4f7da199465be6f38fedccd8f08cc
+>>>>>>> a909705842d9a831a44f2597fd0153fec3b1a0cf
     ALIGN  4
     
     END

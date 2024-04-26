@@ -4,6 +4,14 @@
             "path": "."
         }
     ],
+<<<<<<< HEAD
     "settings": {},
+=======
+    "settings": {
+        "files.associations": {
+            "rtthread.h": "c"
+        }
+    },
+>>>>>>> a909705842d9a831a44f2597fd0153fec3b1a0cf
     "extensions": {}
 }
