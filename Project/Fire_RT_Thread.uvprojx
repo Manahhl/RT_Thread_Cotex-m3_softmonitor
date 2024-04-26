@@ -189,7 +189,7 @@
             <hadIRAM2>0</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
-            <useUlib>1</useUlib>
+            <useUlib>0</useUlib>
             <EndSel>1</EndSel>
             <uLtcg>0</uLtcg>
             <nSecure>0</nSecure>
@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\User;..\rtthread3.0.3\bsp;..\rtthread3.0.3\components\finsh;..\rtthread3.0.3\include;..\rtthread3.0.3\include\libc;..\rtthread3.0.3\src;..\rtthread3.0.3\libcpu\arm\cortex-m3</IncludePath>
+              <IncludePath>..\User;..\rtthread3.0.3\bsp;..\rtthread3.0.3\components\finsh;..\rtthread3.0.3\include;..\rtthread3.0.3\include\libc;..\rtthread3.0.3\src;..\rtthread3.0.3\libcpu\arm\cortex-m3;..\User\device_include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -370,7 +370,7 @@
             <TextAddressRange>0x00000000</TextAddressRange>
             <DataAddressRange>0x20000000</DataAddressRange>
             <pXoBase></pXoBase>
-            <ScatterFile>.\Fire_RT_Thread.Target 1.sct</ScatterFile>
+            <ScatterFile></ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
             <Misc></Misc>
@@ -442,6 +442,21 @@
               <FileName>scheduler.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\rtthread3.0.3\src\scheduler.c</FilePath>
+            </File>
+            <File>
+              <FileName>kservice.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\rtthread3.0.3\src\kservice.c</FilePath>
+            </File>
+            <File>
+              <FileName>object.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\rtthread3.0.3\src\object.c</FilePath>
+            </File>
+            <File>
+              <FileName>idle.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\rtthread3.0.3\src\idle.c</FilePath>
             </File>
           </Files>
         </Group>

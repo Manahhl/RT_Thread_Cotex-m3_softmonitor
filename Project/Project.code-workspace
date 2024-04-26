@@ -4,6 +4,7 @@
             "path": "."
         }
     ],
+<<<<<<< HEAD
     "settings": {
         "files.autoGuessEncoding": true,
         "C_Cpp.default.configurationProvider": "cl.eide",
@@ -41,4 +42,8 @@
             "marus25.cortex-debug"
         ]
     }
+=======
+    "settings": {},
+    "extensions": {}
+>>>>>>> master
 }

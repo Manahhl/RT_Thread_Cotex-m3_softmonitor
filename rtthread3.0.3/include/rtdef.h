@@ -58,6 +58,26 @@ typedef rt_base_t           rt_off_t;
 #define  RT_NULL                    (0)
 
 /**
+ * @brief 对象类型枚举定义
+ */
+enum rt_object_class_type
+{
+    RT_object_Class_Thread = 0,     //对象是线程
+    RT_Object_Class_Semaphore,      //对象是信号量
+    RT_Object_Class_Mutex,          //对象是互斥量
+    RT_Object_Class_Event,          //对象是事件
+    RT_Object_Class_MailBox,        //对象是邮件
+    RT_Object_Class_MessageQueue,   //对象是消息队列
+    RT_Object_Class_Memheap,        //对象是内存堆
+    RT_Object_Class_MemPool,        //对象是内存池
+    RT_Object_Class_Device,         //对象是设备
+    RT_Object_Class_Timer,          //对象是定时器
+    RT_Object_Class_Module,         //对象是模块
+    RT_Object_Class_Unknown,        //未知对象
+    RT_Object_Class_Static = 0x80   //静态对象
+};
+
+/**
  * @brief 线程列表节点
  * 
  */
@@ -129,6 +149,7 @@ struct rt_object_information
 #define RT_EINTR        9    /**< Interrupted system call */
 #define RT_EINVAL       10  /**< Invalid argument */
 
+<<<<<<< HEAD
 /**
  * @brief 对象类型枚举定义
  */
@@ -148,6 +169,9 @@ enum rt_object_class_type
     RT_Object_Class_Unknown,        //未知对象
     RT_Object_Class_Static = 0x80   //静态对象
 };
+=======
+
+>>>>>>> master
 
 
 

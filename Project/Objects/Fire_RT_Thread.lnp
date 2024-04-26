@@ -4,9 +4,12 @@
 ".\objects\context_rvds.o"
 ".\objects\thread.o"
 ".\objects\scheduler.o"
+".\objects\kservice.o"
+".\objects\object.o"
+".\objects\idle.o"
 ".\objects\startup_armcm3.o"
 ".\objects\system_armcm3.o"
---library_type=microlib --strict --scatter ".\Objects\Fire_RT_Thread.sct"
+--strict --scatter ".\Objects\Fire_RT_Thread.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list ".\Listings\Fire_RT_Thread.map" -o .\Objects\Fire_RT_Thread.axf

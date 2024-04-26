@@ -124,6 +124,21 @@
         </SetRegEntry>
       </TargetDriverDllRegistry>
       <Breakpoint/>
+<<<<<<< HEAD
+=======
+      <WatchWindow1>
+        <Ww>
+          <count>0</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>flag1</ItemText>
+        </Ww>
+        <Ww>
+          <count>1</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>flag2</ItemText>
+        </Ww>
+      </WatchWindow1>
+>>>>>>> master
       <Tracepoint>
         <THDelay>0</THDelay>
       </Tracepoint>
@@ -166,6 +181,21 @@
       <pszMrulep></pszMrulep>
       <pSingCmdsp></pSingCmdsp>
       <pMultCmdsp></pMultCmdsp>
+<<<<<<< HEAD
+=======
+      <LogicAnalyzers>
+        <Wi>
+          <IntNumber>0</IntNumber>
+          <FirstString>`flag1</FirstString>
+          <SecondString>FF00000000000000000000000000000000E06F4001000000000000000000000000000000666C6167310000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000001000000000000000000E03F0E00000000000000000000000000000000000000D0050000</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>1</IntNumber>
+          <FirstString>`flag2</FirstString>
+          <SecondString>0080000000000000000000000000000000E06F4001000000000000000000000000000000666C6167320000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000002000000000000000000E03F0E00000000000000000000000000000000000000D0050000</SecondString>
+        </Wi>
+      </LogicAnalyzers>
+>>>>>>> master
     </TargetOption>
   </Target>
 
@@ -311,6 +341,42 @@
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
+    <File>
+      <GroupNumber>3</GroupNumber>
+      <FileNumber>11</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\rtthread3.0.3\src\kservice.c</PathWithFileName>
+      <FilenameWithoutPath>kservice.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>3</GroupNumber>
+      <FileNumber>12</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\rtthread3.0.3\src\object.c</PathWithFileName>
+      <FilenameWithoutPath>object.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>3</GroupNumber>
+      <FileNumber>13</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\rtthread3.0.3\src\idle.c</PathWithFileName>
+      <FilenameWithoutPath>idle.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
   </Group>
 
   <Group>
@@ -321,7 +387,7 @@
     <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>4</GroupNumber>
-      <FileNumber>11</FileNumber>
+      <FileNumber>14</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>

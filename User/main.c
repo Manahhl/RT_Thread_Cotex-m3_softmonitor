@@ -80,6 +80,7 @@ int main()
 	//以下两个线程传入给thread.c文件
 	/* 初始化线程 */
 	rt_thread_init(&rt_flag1_thread,			   /* 线程控制块 */
+					 "thread1",
 				   flag1_thread_entry,			   /* 线程入口地址 */
 				   RT_NULL,						   /* 线程形参 */
 				   &rt_flag1_thread_stack[0],	   /* 线程栈起始地址 */
@@ -89,6 +90,7 @@ int main()
 
 	/* 初始化线程 */
 	rt_thread_init(&rt_flag2_thread,			   /* 线程控制块 */
+					 "thread2",
 				   flag2_thread_entry,			   /* 线程入口地址 */
 				   RT_NULL,						   /* 线程形参 */
 				   &rt_flag2_thread_stack[0],	   /* 线程栈起始地址 */

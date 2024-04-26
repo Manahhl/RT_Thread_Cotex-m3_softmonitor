@@ -347,10 +347,16 @@ Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
 ork --depend=.\objects\context_rvds.d -o.\objects\context_rvds.o -I.\RTE\_Targe
 t_1 -I"D:\Program Files (x86)\Keil5\PACK\ARM\CMSIS\5.7.0\CMSIS\Core\Include" -I
 "D:\Program Files (x86)\Keil5\PACK\ARM\CMSIS\5.7.0\Device\ARM\ARMCM3\Include" -
+<<<<<<< HEAD
 -predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 532" --prede
 fine="_RTE_ SETA 1" --predefine="ARMCM3 SETA 1" --predefine="_RTE_ SETA 1" --li
 st=.\listings\context_rvds.lst ..\rtthread3.0.3\libcpu\arm\cortex-m3\context_rv
 ds.s
+=======
+-predefine="__UVISION_VERSION SETA 532" --predefine="_RTE_ SETA 1" --predefine=
+"ARMCM3 SETA 1" --predefine="_RTE_ SETA 1" --list=.\listings\context_rvds.lst .
+.\rtthread3.0.3\libcpu\arm\cortex-m3\context_rvds.s
+>>>>>>> master
 
 
 
@@ -522,4 +528,8 @@ Symbol: rt_thread_switch_interrupt_flag
       At line 176 in file ..\rtthread3.0.3\libcpu\arm\cortex-m3\context_rvds.s
 
 3 symbols
+<<<<<<< HEAD
 353 symbols in table
+=======
+352 symbols in table
+>>>>>>> master
