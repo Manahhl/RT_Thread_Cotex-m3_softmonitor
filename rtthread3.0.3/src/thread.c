@@ -1,13 +1,14 @@
-/**
- * @file thread.c
- * @author your name (you@domain.com)
- * @brief 
- * @version 0.1
- * @date 2024-03-28
+/*
+ * @Author: jiagebu jack shiyanerzhong@outlook.com
+ * @Date: 2024-04-25 16:44:23
+ * @LastEditors: jiagebu jack shiyanerzhong@outlook.com
+ * @LastEditTime: 2024-04-25 17:59:08
+ * @FilePath: \Projectd:\Git_projects\RT_Thread_From0to1_softmonitor\rtthread3.0.3\src\thread.c
+ * @Description: 
  * 
- * @copyright Copyright (c) 2024
- * 
+ * Copyright (c) 2024 by ${git_name_email}, All Rights Reserved. 
  */
+
 #include "main.h"
 
 /// @brief 由main函数调用
@@ -18,11 +19,16 @@
 /// @param stack_size 线程栈空间大小，单位为字节 定义大小为512字节
 /// @return 
 rt_err_t rt_thread_init(struct rt_thread *thread,
+                        const char       *name,
                         void             (*entry)(void *parameter),
                         void             *parameter,
                         void             *stack_start,
                         rt_uint32_t      stack_size)
 {
+    /* 线程对象初始化 */ 
+    /* 线程结构体开头部分的 4 个成员就是 rt_object_t 成员 */ 
+    rt_object_init((rt_object_t)thread, RT_object_Class_Thread, name);
+    
     rt_list_init(&(thread->tlist));
 
     thread->entry = (void *)entry;

@@ -1,17 +1,17 @@
 #include "main.h"
 
-/* ç”¨äºå­˜å‚¨ä¸Šä¸€ä¸ªçº¿ç¨‹çš„æ ˆçš„ sp çš„æŒ‡é’ˆ */
+/* ÓÃÓÚ´æ´¢ÉÏÒ»¸öÏß³ÌµÄÕ»µÄ sp µÄÖ¸Õë */
 rt_uint32_t rt_interrupt_from_thread;
 
-/* ç”¨äºå­˜å‚¨ä¸‹ä¸€ä¸ªå°†è¦è¿è¡Œçš„çº¿ç¨‹çš„æ ˆçš„ sp çš„æŒ‡é’ˆ */
+/* ÓÃÓÚ´æ´¢ÏÂÒ»¸ö½«ÒªÔËĞĞµÄÏß³ÌµÄÕ»µÄ sp µÄÖ¸Õë */
 rt_uint32_t rt_interrupt_to_thread;
 
-/* PendSV ä¸­æ–­æœåŠ¡å‡½æ•°æ‰§è¡Œæ ‡å¿— */
+/* PendSV ÖĞ¶Ï·şÎñº¯ÊıÖ´ĞĞ±êÖ¾ */
 rt_uint32_t rt_thread_switch_interrupt_flag;
 
 struct exception_stack_frame 
 {
-    /* å¼‚å¸¸å‘ç”Ÿæ—¶ï¼Œè‡ªåŠ¨åŠ è½½åˆ° CPU å¯„å­˜å™¨çš„å†…å®¹ */
+    /* Òì³£·¢ÉúÊ±£¬×Ô¶¯¼ÓÔØµ½ CPU ¼Ä´æÆ÷µÄÄÚÈİ */
     rt_uint32_t r0;
     rt_uint32_t r1;
     rt_uint32_t r2;
@@ -24,7 +24,7 @@ struct exception_stack_frame
 };
 struct stack_frame 
 {
-    /* å¼‚å¸¸å‘ç”Ÿæ—¶ï¼Œéœ€æ‰‹åŠ¨åŠ è½½åˆ° CPU å¯„å­˜å™¨çš„å†…å®¹ */
+    /* Òì³£·¢ÉúÊ±£¬ĞèÊÖ¶¯¼ÓÔØµ½ CPU ¼Ä´æÆ÷µÄÄÚÈİ */
     rt_uint32_t r4;
     rt_uint32_t r5;
     rt_uint32_t r6;
@@ -79,35 +79,35 @@ rt_uint8_t *rt_hw_stack_init(void       *tentry,
 //    struct stack_frame *stack_frame;
 //    rt_uint8_t         *stk;
 //    unsigned long      i;
-//    //è·å–æ ˆé¡¶æŒ‡é’ˆ
+//    //»ñÈ¡Õ»¶¥Ö¸Õë
 //    stk = stack_addr + sizeof(rt_uint32_t);
 
-//    /* è®© stk æŒ‡é’ˆå‘ä¸‹ 8 å­—èŠ‚å¯¹é½ */
+//    /* ÈÃ stk Ö¸ÕëÏòÏÂ 8 ×Ö½Ú¶ÔÆë */
 //    stk = (rt_uint8_t *)RT_ALIGN_DOWN((rt_uint32_t)stk, 8);
 
-//    /* stk æŒ‡é’ˆç»§ç»­å‘ä¸‹ç§»åŠ¨ sizeof(struct stack_frame)ä¸ªåç§» */
+//    /* stk Ö¸Õë¼ÌĞøÏòÏÂÒÆ¶¯ sizeof(struct stack_frame)¸öÆ«ÒÆ */
 //    stk -= sizeof(struct stack_frame);
 
-//    /* å°† stk æŒ‡é’ˆå¼ºåˆ¶è½¬åŒ–ä¸º stack_frame ç±»å‹åå­˜åˆ° stack_frame */
+//    /* ½« stk Ö¸ÕëÇ¿ÖÆ×ª»¯Îª stack_frame ÀàĞÍºó´æµ½ stack_frame */
 //    stack_frame = (struct stack_frame *)stk;
 
-//    /* ä»¥ stack_frame ä¸ºèµ·å§‹åœ°å€ï¼Œå°†æ ˆç©ºé—´é‡Œé¢çš„ sizeof(struct stack_frame)ä¸ªå†…å­˜åˆå§‹åŒ–ä¸º 0xdeadbeef */
+//    /* ÒÔ stack_frame ÎªÆğÊ¼µØÖ·£¬½«Õ»¿Õ¼äÀïÃæµÄ sizeof(struct stack_frame)¸öÄÚ´æ³õÊ¼»¯Îª 0xdeadbeef */
 //    for (i = 0; i < sizeof(struct stack_frame) / sizeof(rt_uint32_t); i++)
 //    {
 //        ((rt_uint32_t *)stack_frame)[i] = 0xdeadbeef;
 //    }
 
-//    /* åˆå§‹åŒ–å¼‚å¸¸å‘ç”Ÿæ—¶è‡ªåŠ¨ä¿å­˜çš„å¯„å­˜å™¨ */
+//    /* ³õÊ¼»¯Òì³£·¢ÉúÊ±×Ô¶¯±£´æµÄ¼Ä´æÆ÷ */
 //    stack_frame->exception_stack_frame.r0 = (unsigned long)parameter;                                            /* r0 : argument */
 //    stack_frame->exception_stack_frame.r1 = 0;                                                                   /* r1 */
 //    stack_frame->exception_stack_frame.r2 = 0;                                                                   /* r2 */
 //    stack_frame->exception_stack_frame.r3 = 0;                                                                   /* r3 */
 //    stack_frame->exception_stack_frame.r12 = 0;                                                                  /* r12 */
-//    stack_frame->exception_stack_frame.lr = 0;                                                                   /* lrï¼šæš‚æ—¶åˆå§‹åŒ–ä¸º 0 */
+//    stack_frame->exception_stack_frame.lr = 0;                                                                   /* lr£ºÔİÊ±³õÊ¼»¯Îª 0 */
 //    stack_frame->exception_stack_frame.pc = (unsigned long)tentry;                                               /* entry point, pc */
 //    stack_frame->exception_stack_frame.psr = 0x01000000L;                                                        /* PSR */
 
-//    /*è¿”å›æ ˆé¡¶æŒ‡é’ˆ*/
+//    /*·µ»ØÕ»¶¥Ö¸Õë*/
 //    return stk;
 //}
 

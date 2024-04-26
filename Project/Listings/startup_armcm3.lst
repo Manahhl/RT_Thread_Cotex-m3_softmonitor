@@ -75,9 +75,7 @@ ARM Macro Assembler    Page 2
    47 00000400                 IF               Heap_Size != 0 
                                                             ; Heap is provided
    48 00000400                 AREA             HEAP, NOINIT, READWRITE, ALIGN=
-3 
-                                                            ;ALIGN = 3 2^3 = 8 
-                                                            8×Ö½Ú¶ÔÆë
+3
    49 00000000         __heap_base
    50 00000000         Heap_Mem
                                SPACE            Heap_Size
@@ -128,14 +126,14 @@ ARM Macro Assembler    Page 2
    82 00000040         
    83 00000040         ; Interrupts
    84 00000040 00000000        DCD              Interrupt0_Handler 
+                                                            ;   0 Interrupt 0
+   85 00000044 00000000        DCD              Interrupt1_Handler 
 
 
 
 ARM Macro Assembler    Page 3 
 
 
-                                                            ;   0 Interrupt 0
-   85 00000044 00000000        DCD              Interrupt1_Handler 
                                                             ;   1 Interrupt 1
    86 00000048 00000000        DCD              Interrupt2_Handler 
                                                             ;   2 Interrupt 2
@@ -155,6 +153,8 @@ ARM Macro Assembler    Page 3
                                                             ;   9 Interrupt 9
    94 00000068         
    95 00000068 00 00 00 
+              00 00 00 
+              00 00 00 
               00 00 00 
               00 00 00 
               00 00 00 
@@ -467,8 +467,6 @@ ARM Macro Assembler    Page 8
               00 00 00 
               00 00 00 
               00 00 00 
-              00 00 00 
-              00 00 00 
               00               SPACE            (214 * 4)   ; Interrupts 10 .. 
                                                             224 are left out
    96 000003C0         __Vectors_End
@@ -518,14 +516,14 @@ ARM Macro Assembler    Page 8
   130 0000000A                 ENDP
   131 0000000A                 MEND
   132 0000000A         
+  133 0000000A         
+  134 0000000A         ; Default exception/interrupt handler
 
 
 
 ARM Macro Assembler    Page 9 
 
 
-  133 0000000A         
-  134 0000000A         ; Default exception/interrupt handler
   135 0000000A         
   136 0000000A                 Set_Default_Handler
                                                 NMI_Handler
@@ -583,14 +581,14 @@ K]
   130 00000018                 ENDP
   143 00000018                 Set_Default_Handler
                                                 SysTick_Handler
+  127 00000018         SysTick_Handler
+                               PROC
 
 
 
 ARM Macro Assembler    Page 10 
 
 
-  127 00000018         SysTick_Handler
-                               PROC
   128 00000018                 EXPORT           SysTick_Handler             [WE
 AK]
   129 00000018 E7FE            B                .
@@ -648,14 +646,14 @@ AK]
                                                 Interrupt6_Handler
   127 00000026         Interrupt6_Handler
                                PROC
+  128 00000026                 EXPORT           Interrupt6_Handler             
+[WEAK]
 
 
 
 ARM Macro Assembler    Page 11 
 
 
-  128 00000026                 EXPORT           Interrupt6_Handler             
-[WEAK]
   129 00000026 E7FE            B                .
   130 00000028                 ENDP
   152 00000028                 Set_Default_Handler
@@ -689,7 +687,8 @@ ARM Macro Assembler    Page 11
   159 00000030         ; User setup Stack & Heap
   160 00000030         
   161 00000030                 IF               :LNOT::DEF:__MICROLIB
-  163                          ENDIF
+  162 00000030                 IMPORT           __use_two_region_memory
+  163 00000030                 ENDIF
   164 00000030         
   165 00000030                 EXPORT           __stack_limit
   166 00000030                 EXPORT           __initial_sp
@@ -706,9 +705,9 @@ Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
 ork --depend=.\objects\startup_armcm3.d -o.\objects\startup_armcm3.o -I.\RTE\_T
 arget_1 -I"D:\Program Files (x86)\Keil5\PACK\ARM\CMSIS\5.7.0\CMSIS\Core\Include
 " -I"D:\Program Files (x86)\Keil5\PACK\ARM\CMSIS\5.7.0\Device\ARM\ARMCM3\Includ
-e" --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 532" --p
-redefine="_RTE_ SETA 1" --predefine="ARMCM3 SETA 1" --predefine="_RTE_ SETA 1" 
---list=.\listings\startup_armcm3.lst RTE\Device\ARMCM3\startup_ARMCM3.s
+e" --predefine="__UVISION_VERSION SETA 532" --predefine="_RTE_ SETA 1" --predef
+ine="ARMCM3 SETA 1" --predefine="_RTE_ SETA 1" --list=.\listings\startup_armcm3
+.lst RTE\Device\ARMCM3\startup_ARMCM3.s
 
 
 
@@ -1125,5 +1124,13 @@ Symbol: __main
    Uses
       At line 111 in file RTE\Device\ARMCM3\startup_ARMCM3.s
 Comment: __main used once
-2 symbols
-373 symbols in table
+__use_two_region_memory 00000000
+
+Symbol: __use_two_region_memory
+   Definitions
+      At line 162 in file RTE\Device\ARMCM3\startup_ARMCM3.s
+   Uses
+      None
+Comment: __use_two_region_memory unused
+3 symbols
+375 symbols in table
