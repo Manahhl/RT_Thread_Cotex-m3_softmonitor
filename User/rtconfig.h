@@ -1,8 +1,14 @@
-#ifndef __RTCONFIG_H
-#define __RTCONFIG_H
-#define RT_ALIGN_SIZE           4 //å¯¹é½å­—èŠ‚
-#define RT_THREAD_PRIORITY_MAX  32//æœ€å¤§ä¼˜å…ˆçº§
-#define RT_NAME_MAX             8//å¯¹è±¡åå­—æœ€å¤§é•¿åº¦
+#ifndef __RTTHREAD_CFG_H__
+#define __RTTHREAD_CFG_H__
 
 
-#endif // !__RTCONFIG_H
+#define RT_THREAD_PRIORITY_MAX  32     /* ×î´óÓÅÏÈ¼¶ */
+#define RT_ALIGN_SIZE           4      /* ¶àÉÙ¸ö×Ö½Ú¶ÔÆë */
+
+#define RT_NAME_MAX	            8      /* ÄÚºË¶ÔÏóµÄÃû×Ö³¤¶È£¬×Ö·û´®ĞÎÊ½ */
+
+
+#define RT_TICK_PER_SECOND	    100
+
+#endif /* __RTTHREAD_CFG_H__ */
+
